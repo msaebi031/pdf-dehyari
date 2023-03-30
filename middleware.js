@@ -8,7 +8,7 @@ export const middleware = async (request) => {
   const response = NextResponse.next();
   const session = await getIronSession(request, response, {
     cookieName: "login",
-    password: process.env.PASSWORD_COOKI,
+    password: "YvAbguq8tdjdmyNwYWmdtBocPxKFpQr4",
   });
   const { user } = session;
   if (!user?.contenteshy) {

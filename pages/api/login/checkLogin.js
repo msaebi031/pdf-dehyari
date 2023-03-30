@@ -17,11 +17,11 @@ export default withIronSessionApiRoute(
   },
   {
     cookieName: "login",
-    password: process.env.PASSWORD_COOKI,
+    password: "YvAbguq8tdjdmyNwYWmdtBocPxKFpQr4",
     // secure: true should be used in production (HTTPS) but can't be used in development (HTTP)
     cookieOptions: {
       httpOnly: true,
-      secure: process.env.NODE_ENV !== "development",
+      // secure: process.env.NODE_ENV !== "development",
       // path: "/panelAdmin",
     },
   }
