@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon server.js",
-    "build": "next build",
-    "start": "node server.js",
-    "lint": "next lint"
+    "start": "node index.js"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
