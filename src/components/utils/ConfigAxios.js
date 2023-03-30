@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Set config defaults when creating the instance
 const instance = axios.create({
-  baseURL: "https://pdf-dehyari.vercel.app",
+  baseURL: "http://localhost:3000",
   headers: {
     Authorization: "6LfvH-YZAAAAAMSSiVglqs0tE0mXr1sIdFgScwM-",
     "Content-Type": "application/json",

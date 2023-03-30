@@ -1,9 +1,8 @@
-const { ReadData, WriteData } = require("../../src/components/utils/ReadAndWrite");
+import { ReadData, WriteData } from "../../src/components/utils/ReadAndWrite";
 
 const SelectInfDehyari = async ({ id }) => {
   const data = await ReadData();
   const find = await data.find((e) => e.id == id);
-  console.log(SelectInfDehyari);
   return find;
 };
 
@@ -16,4 +15,4 @@ const UpdateInfDehyari = async ({ id, name, admin, account }) => {
   await WriteData(id, name, admin, account);
 };
 
-module.exports = { SelectInfDehyari, SelectAllInfDehyari, UpdateInfDehyari };
+export { SelectInfDehyari, SelectAllInfDehyari, UpdateInfDehyari };

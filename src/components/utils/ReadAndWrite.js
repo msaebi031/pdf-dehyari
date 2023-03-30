@@ -1,10 +1,10 @@
-const fs = require("fs");
-const editJsonFile = require("edit-json-file");
+import fs from "fs";
 
 const ReadData = () => {
   try {
-    let file = editJsonFile(`database/data.json`);
-    return file.get();
+    let file = fs.readFileSync("database/data.json");
+    var json = JSON.parse(file);
+    return json;
   } catch (error) {
     console.log(error);
   }
@@ -12,8 +12,9 @@ const ReadData = () => {
 
 const ReadLogin = () => {
   try {
-    let file = editJsonFile(`database/login.json`);
-    return file.get();
+    let file = fs.readFileSync(`database/login.json`);
+    var json = JSON.parse(file);
+    return json;
   } catch (error) {
     console.log(error);
   }
@@ -37,4 +38,4 @@ const WriteData = async (id, name, admin, acount) => {
   }
 };
 
-module.exports = { ReadData, ReadLogin, WriteData };
+export { ReadData, ReadLogin, WriteData };

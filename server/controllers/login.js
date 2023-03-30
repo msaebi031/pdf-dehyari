@@ -1,4 +1,4 @@
-const { ReadLogin } = require("../../src/components/utils/ReadAndWrite");
+import { ReadLogin } from "../../src/components/utils/ReadAndWrite";
 
 const checkLogin = async ({ password, email }) => {
   const data = await ReadLogin();
@@ -10,6 +10,4 @@ const checkLogin = async ({ password, email }) => {
   }
 };
 
-module.exports = {
-  checkLogin,
-};
+export { checkLogin };
