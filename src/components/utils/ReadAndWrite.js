@@ -2,7 +2,8 @@ import fs from "fs";
 
 const ReadData = () => {
   try {
-    let file = fs.readFileSync("database/data.json");
+    const jsonDirectory = path.join(process.cwd(), "database");
+    let file = fs.readFileSync(jsonDirectory + "/data.json", "utf8");
     var json = JSON.parse(file);
     return json;
   } catch (error) {
@@ -12,7 +13,8 @@ const ReadData = () => {
 
 const ReadLogin = () => {
   try {
-    let file = fs.readFileSync(`database/login.json`);
+    const jsonDirectory = path.join(process.cwd(), "database");
+    let file = fs.readFileSync(jsonDirectory + "/login.json", "utf8");
     var json = JSON.parse(file);
     return json;
   } catch (error) {
@@ -31,8 +33,8 @@ const WriteData = async (id, name, admin, acount) => {
     getDate.account = acount;
     copyData[find] = getDate;
     var json = JSON.stringify(copyData);
-
-    fs.writeFileSync("database/data.json", json);
+    const jsonDirectory = path.join(process.cwd(), "database");
+    fs.writeFileSync(jsonDirectory + "/data.json", json);
   } catch (error) {
     console.log(error);
   }
