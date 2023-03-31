@@ -17,7 +17,7 @@ export default withIronSessionApiRoute(
   },
   {
     cookieName: "login",
-    password: "YvAbguq8tdjdmyNwYWmdtBocPxKFpQr4",
+    password: process.env.PASSWORD_COOKI,
     // secure: true should be used in production (HTTPS) but can't be used in development (HTTP)
     cookieOptions: {
       httpOnly: true,
